@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: darkolivegreen;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+[class*="col-"]{
+    float: left;
+    padding:15px
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.header{
+    width: 100%;
+    padding: 20px;
+    background-color: cornflowerblue;
+    color: blueviolet;
+}
+.menu ul{
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+}
+.menu li{
+    margin-bottom: 20px;
+    background-color: blueviolet;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 5px;
+}
+.footer{
+    width: 100%;
+    padding: 20px;
+    background-color: darkcyan;
+    color: white;
+}
+.aside{
+    text-align: center;
+    padding: 8px;
+    background-color: aquamarine;
+    color: black;
+    font-size: large;
+}
+/* for mobile phone */
+@media screen {
+    [class*="col-"]{
+        width: 100%;
+    }
+}
+/* for tablets */
+@media screen and (min-width: 600px) {
+    .col-t-1{width: 25%;}
+    .col-t-2{width: 65%;}
+    .col-t-3{width: 100%;}
+}
+/* for Pc */
+@media screen and (min-width: 768px) {
+    .col-1{width: 20%;}
+    .col-2{width: 60%;}
+    .col-3{width: 20%;}
+}
+
